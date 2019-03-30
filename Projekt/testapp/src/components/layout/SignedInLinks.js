@@ -6,7 +6,7 @@ const SignedInLinks = () => {
         <ul className="right">
         <li><NavLink to='/'>Nyheter</NavLink></li>
         <li><NavLink to='/'>Log Out</NavLink></li>
-        <li><NavLink to='/' className='btn btn-floating grey lighten-1'>NN</NavLink></li>
+        <li><NavLink to='/' className='btn btn-floating green lighten-1'>NN</NavLink></li>
        
         </ul>
     )
