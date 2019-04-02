@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createProject } from '../../store/actions/projectActions'
 
 class CreateProject extends Component {
    state = {
@@ -9,14 +11,14 @@ class CreateProject extends Component {
        this.setState({
        [e.target.id]: e.target.value               //för kunna registrera email
        })
-//console.log(e) det här har använts i början
    }
    handleSubmit = (e) => {
        e.preventDefault();                          //för att kunna registrera password
-       console.log(this.state) 
-
-//console.log(e) det skrev såhär i början
+      // console.log(this.state) 
+       this.props.createProject(this.state)                                             //console.log(e) det(rad 17) skrev så här i början
    }
+      
+
    render() {
     return (
       <div className="container">
@@ -39,5 +41,12 @@ class CreateProject extends Component {
   }
 }
 
-export default CreateProject
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createProject: (project) => dispatch(createProject(project))
+  }
+}
+
+
+export default connect(null, mapDispatchToProps)(CreateProject)
 
