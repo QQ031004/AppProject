@@ -8,11 +8,11 @@ const ProjectDetails = (props) => {
       <div className="card z-depth-0">
         <div className="card-content">
            <span className="card-title">Project title - {id}</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sequi</p>
+            <p>Bispgatans trafik är helt ok men, fortfarande för många billar varje dag.</p>
         </div>
         <div className="card-action gret lighten-4 grey-text">
-            <div>Posted by me-QQ</div>
-            <div>29 Mars 2019, kl 14:15</div>
+            <div>Posted by QQ</div>
+            <div>April 2019</div>
         </div>
      </div>
     </div>
