@@ -9,11 +9,11 @@ export const createProject = (project) => {
      return (dispatch, getState, { getFirebase, getFirestore }) => {
          // Att göra async till database/make async call to database
          const firestore = getFirestore();
-         firestore.collection('project').add({
+         firestore.collection('projects').add({
              ...project,
-             beltFirstName: 'Zhou',
-             beltLastName: 'Bella',
-             beltId: 11008,
+             authorFirstName: 'Net',
+             authorLastName: 'QQ',
+             authorId: 11008,
              createdAt: new Date()
          }).then(() => {
              dispatch({ type: 'CREATE_PROJECT', project }); 

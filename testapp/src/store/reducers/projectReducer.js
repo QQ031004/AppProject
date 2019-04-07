@@ -2,7 +2,7 @@ const initState = {
     projects: [
        {id: '1', title: 'vitt bälte', conent: 'namn brodyr grått'},
        {id: '2', title: 'grönt bälte', conent: 'namn brodyr vitt'},
-       {id: '3', title: 'blått bälte', conent: 'namn brodyr gult'},
+       {id: '3', title: 'blått bälte', conent: 'namn brodyr gult'}
     ]
 }
 
@@ -12,7 +12,7 @@ const initState = {
             console.log('created project', action.project);
             return state;
           case 'CREATE_PROJECT_ERROR':
-            console.log('create projact error', action.err);
+            console.log('create project error', action.err);
             return state;
             default:
               return state;    
