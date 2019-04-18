@@ -8,37 +8,36 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './store/reducers/rootReducer'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
-import { createFirestoreInstance } from 'redux-firestore'
+
+import { reduxFirestore, getFirestore } from 'redux-firestore'
 import { reactReduxFirebase, getFirebase} from 'react-redux-firebase'
 import fbConfig from './config/fbConfig'
 
 
 //const fbConfig = { getFirebase }
 
-const store = createStore(
-   rootReducer,
-   initialState,
+const store = createStore(rootReducer,
    compose(
-    applyMiddleware(thunk.withExtraArgument(getFirebase)
-    //reduxFirestore(fbConfig),
-    //reactReduxFirebase(fbConfig)
+    applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig)
       //{
       //useFirestoreForProfiles: true,
       //userProfile: "users",
       //attachAuthIsready: true
      //}
     )
-  )
+  );
    
     // this prevents to load the dom previous authentication
-    store.firebaseAuthIsReady.then(() => {
-    ReactDOM.render(
-    <Provider store={store}>
-     <App />
-     </Provider>,
-      document.getElementById("root")
-    )
-   })
+    //store.firebaseAuthIsReady.then(() => {
+    //ReactDOM.render(
+    //<Provider store={store}>
+     //<App />
+     //</Provider>,
+      //document.getElementById("root")
+    //)
+   // })
 
    
 
