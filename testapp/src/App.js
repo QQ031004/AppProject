@@ -11,9 +11,9 @@ import CreateProject from './components/projects/CreateProject'
 class App extends Component {
    state = {
     projects: [
-      {id: '1', title: 'vitt bälte', conent: 'namn brodyr grått'},
-      {id: '2', title: 'grönt bälte', conent: 'namn brodyr vitt'},
-      {id: '3', title: 'blått bälte', conent: 'namn brodyr gult'},
+      {id: '1', title: 'VittBälte', conent: 'NamnBrodyr Med grått tråd'},
+      {id: '2', title: 'GröntBälte', conent: 'NamnBrodyr Med vitt tråd'},
+      {id: '3', title: 'BlåttBälte', conent: 'NamnBrodyr Med gult tråd'}
    ]
    };
 
@@ -26,7 +26,7 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Dashboard} />
-          <Route path='/project/:id' component={ProjectDetails } />
+          <Route path='/project/:id' component={ProjectDetails} />
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />
           <Route path='/create' component={CreateProject} />

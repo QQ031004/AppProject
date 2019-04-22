@@ -1,9 +1,12 @@
-
+html {
+  min-height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background: rgb(197, 195, 195);
+  min-height: 100%;
 
  }
  /* rad 10-14 är för div "project title" */
@@ -21,7 +24,7 @@ body {
     margin: 25px 0;
   }
 
-  /* Följane rad 23-30 är för att få rosa linje effekt när de klickas på email osv */
+  /* Följane rad 25-30 är för att få rosa linje effekt när de klickas på email osv */
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-defould):focus:not([readonly]),
