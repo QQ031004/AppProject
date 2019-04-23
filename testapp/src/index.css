@@ -7,15 +7,14 @@ body {
   font-family: sans-serif;
   background: rgb(197, 195, 195);
   min-height: 100%;
-
  }
- /* rad 10-14 är för div "project title" */
+ /* rad 11-15 är för div "project title" */
  div.card{
    margin: 45px;
    margin-left: 3px;
    padding-left: 15px;
  }
-/* rad 16-22 är för signin/up osv klickbara rutor*/
+/* rad 18-22 är för signin/up osv klickbara rutor*/
  form{
    padding: 25px;
    margin-top: 60px;
