@@ -26,7 +26,7 @@ getCurPlayer(){
         <div className="leftPanel">
           <Board squares={squares}/>
         </div>
-        <div className="rightPlayer">
+        <div className="rightPanel">
           <PlayerInfo curPlayer={curPlayer}/>
           <History history={history}/>
         </div>
@@ -34,4 +34,4 @@ getCurPlayer(){
     );
   }
 }
-export default App
+export default App;
