@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { component } from 'react'
+import Board from './components/Board'
+import PlayerInfo from './components/PlayerInfo'
+import History from './components/History'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends component {
+  constructor(props){
+    super(props)
+    this.state={
+      square:new Array(9).fill(null),
+      stepCount:0,
+      history:[],
+    }
+  }
+
+getCurPlayer(){
+  const { stepCount } = this.state
+  return stepCount%2==0?"X":"O"
 }
-
-export default App;
+  render() {
+    const curPlayer = this.getCurPlayer()
+    const { history,squares } = this.state
+    return (
+      <div className="App">
+        <div className="leftPanel">
+          <Board squares={squares}/>
+        </div>
+        <div className="rightPlayer">
+          <PlayerInfo curPlayer={curPlayer}/>
+          <History history={history}/>
+        </div>
+      </div>
+    );
+  }
+}
+export default App

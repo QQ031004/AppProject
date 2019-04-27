@@ -1,0 +1,13 @@
+.square{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border: solit 3px darkgoldenrod;
+    font-size: 40px;
+    line-height: 80px;
+}
+
+.square:hover{
+    border-color: palevioletred;
+    color: palevioletred;
+}
