@@ -3,7 +3,7 @@ Allt om APP som gjordes tidigare är så rörliga därför görs om nu med en ny
 V 9 insträffade massor problem...Install V3
 till sist löst det genom att:
 
-468  npm i -save react-redux@^5.1.1
+  468  npm i -save react-redux@^5.1.1
   469  npm start
   470  npm uninstall react-scripts
   471  npm install react-scripts

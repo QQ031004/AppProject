@@ -4,11 +4,15 @@ import './PlayerInfo.css'
 
 class PlayerInfo extends Component {
     render(){
-        const { curPlayer } = this.props
-        return (<div className="playerInfo">
-            Next Player:{curPlayer}
-        </div>)
-    }
-}
-
+        const { curPlayer,winInfo } = this.props
+        console. log("PlayerInfo:winInfo->",winInfo)
+        if(winInfo.isWin){
+          return (<div className="playInfo">Player
+            {winInfo.winPlayer}-Vunnit!</div>)
+        }else{
+            return (<div className="playInfo">Next Player:
+            {curPlayer}</div>)
+        }
+     }
+   }
 export defauld PlayerInfo

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React,{Component} from 'react'
 import Square from './Square'
 import './Board.css' 
 
@@ -9,7 +9,11 @@ class Board extends Component {
     }
     genSquareUI(pos){
         const { squares } = this.props
-        return (<Square pos={pos} info={squares[pos]}/>)
+        return (<Square 
+                 pos={pos} 
+                 info={squares[pos]}
+                 onClick={this.props.onClickSquare} 
+               />)
      }
     render(){
        
@@ -35,10 +39,10 @@ class Board extends Component {
     }
 
 }
-export default Board
 
 
 //Följande kan förenklas som rad:19 20 21, efter tilläget rad:9 10 11
 //  <Square pos={0} info={squares[0]}/>
 //  <Square pos={1} info={squares[1]}/>
 //  <Square pos={2} info={squares[2]}/>
+export default Board
