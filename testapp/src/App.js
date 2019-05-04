@@ -7,7 +7,6 @@ import SignIn from './components/Auth/SignIn'
 import SignUp from './components/Auth/SignUp'
 import CreateProject from './components/projects/CreateProject'
 
-
 class App extends Component {
    state = {
     projects: [
