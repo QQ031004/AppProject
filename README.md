@@ -3,6 +3,17 @@ Allt om APP som gjordes tidigare är så rörliga därför görs om nu med en ny
 V 9 insträffade massor problem...Install V3
 till sist löst det genom att:
 
+  239  npm -g install create-react-app
+  240  sudo npm -g install create-react-app
+  270  npm install react-router-dom
+   npm install redux react-redux
+   42  npm install redux-thunk
+   
+  343  npm install firebase
+  344  npm intall redux-context
+  pm install react-redux-firebase redux-firestore
+  352  npm i --save redux-firestore@latest
+  353  npm install --save react-redux-firebase
   468  npm i -save react-redux@^5.1.1
   469  npm start
   470  npm uninstall react-scripts
@@ -23,15 +34,15 @@ till sist löst det genom att:
 
 
 
+  2019-05-12 kl 01:50
+Slutprojekt-Programmering
+GitHub: Repo-WebbMedHttps
+Terminal:
+cd testapp
+ git init
+git add .
+git commit -m 'WebbMedHttps'
+git remote add origin git@github.com:QQ031004/qiuqiongzhou.github.io.git
+git push -u origin master
 
 
-239  npm -g install create-react-app
-  240  sudo npm -g install create-react-app
-  270  npm install react-router-dom
-   npm install redux react-redux
-   42  npm install redux-thunk
-  343  npm install firebase
-  344  npm intall redux-context
-  pm install react-redux-firebase redux-firestore
-  352  npm i --save redux-firestore@latest
-  353  npm install --save react-redux-firebase
